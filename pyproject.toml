@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "XanosMerks"
+version = "1.0.0"
+description = "Легковесный движок для локального запуска нейросетей (LLM) на Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "CharmLxt", email = "reception.mailspypi@gmail.com" }]
+keywords = ["llm", "inference", "local", "neural-networks", "safetensors", "gguf"]
+dependencies = [
+    "numpy>=1.21.0",
+    "9was9>=0.1.1",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Environment :: Console",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/CharmLxt/XanosMerks"
+Source = "https://github.com/CharmLxt/XanosMerks"
+Tracker = "https://github.com/CharmLxt/XanosMerks/issues"
+
+[project.optional-dependencies]
+charm = ["CharmPkk>=31.10.26b1"]
+
+[project.scripts]
+xanosmerks-gamtype = "xanosmerks.gamtype.engine:main"
+xanosmerks-meanflare = "xanosmerks.meanflare.engine:main"
+
+[tool.setuptools.packages.find]
+include = ["xanosmerks*"]
